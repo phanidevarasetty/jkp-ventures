@@ -56,20 +56,25 @@
             box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
         }
 
-        .nav-container {
-            max-width: 1200px;
+        .nav-container {      
             margin: 0 auto;
-            padding: 20px 40px;
+            padding: 20px 60px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        .logo {
-            font-size: 22px;
-            font-weight: 700;
-            color: var(--primary);
-            letter-spacing: -0.5px;
+        .logo { font-size: 22px; font-weight: 700; color: var(--primary); text-decoration: none; }
+        
+        .logo-wrapper {
+            width: 100px;       /* 🔹 change this value only */
+            display: block;
+        }
+
+        .logo-wrapper img {
+            width: 100%;
+            height: auto;       /* ✅ preserves aspect ratio */
+            display: block;
         }
 
         .nav-links {
@@ -839,7 +844,11 @@
     <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-container">
-            <div class="logo">JKP Ventures</div>
+            <div class="logo">
+                <a href="/" class="logo-wrapper">
+                    <img src="/jkp_logo.jpg" alt="JKP Ventures" />
+                </a>
+            </div>
             <div class="menu-toggle" onclick="toggleMenu()">
                 <span></span>
                 <span></span>

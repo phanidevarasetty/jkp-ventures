@@ -51,21 +51,26 @@
       transition: all 0.3s ease;
     }
 
-    .nav-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+    .nav-container {      
+            margin: 0 auto;
+            padding: 20px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-    .logo {
-      font-size: 22px;
-      font-weight: 700;
-      color: var(--primary);
-      text-decoration: none;
-    }
+        .logo { font-size: 22px; font-weight: 700; color: var(--primary); text-decoration: none; }
+        
+        .logo-wrapper {
+            width: 100px;       /* 🔹 change this value only */
+            display: block;
+        }
+
+        .logo-wrapper img {
+            width: 100%;
+            height: auto;       /* ✅ preserves aspect ratio */
+            display: block;
+        }
 
     .content-wrapper {
       max-width: 900px;
@@ -161,7 +166,9 @@
   <!-- Navigation -->
   <nav>
     <div class="nav-container">
-      <a href="/" class="logo">JKP Ventures</a>
+      <a href="/" class="logo-wrapper">
+          <img src="/jkp_logo.jpg" alt="JKP Ventures" />
+      </a>
     </div>
   </nav>
 
